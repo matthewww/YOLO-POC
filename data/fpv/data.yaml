@@ -1,0 +1,22 @@
+# YOLO dataset configuration for FPV component detection
+# Update path to the absolute path of your dataset root, or use relative path
+path: data/fpv
+
+train: images/train
+val:   images/val
+
+# Number of classes
+nc: 10
+
+# Class names - add new classes here without changing any code
+names:
+  0: motor
+  1: flight_controller
+  2: esc
+  3: camera
+  4: vtx
+  5: receiver
+  6: propeller
+  7: lipo_battery
+  8: xt60_connector
+  9: capacitor
