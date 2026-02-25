@@ -25,6 +25,11 @@ dependencies = [
     "matplotlib>=3.7",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
 [project.scripts]
 fpv-vision = "fpv_vision.cli:app"
 
