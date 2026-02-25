@@ -1,0 +1,41 @@
+# Default configuration for fpv-vision
+model:
+  weights: yolo11n.pt
+  device: ""          # blank = auto-detect (CUDA > MPS > CPU)
+  confidence: 0.5
+  iou_threshold: 0.45
+  imgsz: 640
+
+training:
+  epochs: 100
+  batch_size: 16
+  lr0: 0.01
+  optimizer: auto
+  patience: 50
+  save_period: 10
+  project: runs/train
+  name: fpv_v1
+  pretrained: true
+  augment: true
+
+data:
+  dir: data/fpv
+  yaml: data/fpv/data.yaml
+
+inference:
+  source: 0            # 0 = webcam; path string for file
+  show: true
+  save: false
+  save_dir: runs/detect
+
+classes:
+  - motor
+  - flight_controller
+  - esc
+  - camera
+  - vtx
+  - receiver
+  - propeller
+  - lipo_battery
+  - xt60_connector
+  - capacitor
